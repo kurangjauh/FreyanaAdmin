@@ -31,8 +31,8 @@ const routes = [
   },
   {
     path: '/app/leads', // url
-    icon: <InboxArrowDownIcon className={iconClasses}/>, // icon component
-    name: 'Article', // name that appear in Sidebar
+    icon: <DocumentDuplicateIcon className={iconClasses}/>, // icon component
+    name: 'Articles', // name that appear in Sidebar
   },
   {
     path: '', //no url needed as this has submenu

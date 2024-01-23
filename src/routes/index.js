@@ -17,6 +17,8 @@ const ProfileSettings = lazy(() => import('../pages/protected/ProfileSettings'))
 const GettingStarted = lazy(() => import('../pages/GettingStarted'))
 const DocFeatures = lazy(() => import('../pages/DocFeatures'))
 const DocComponents = lazy(() => import('../pages/DocComponents'))
+const Articles = lazy(() => import('../pages/protected/Articles'))
+const Embed = lazy(() => import('../pages/protected/Embed'))
 
 
 const routes = [
@@ -31,6 +33,14 @@ const routes = [
   {
     path: '/leads',
     component: Leads,
+  },
+  {
+    path: '/articles',
+    component: Articles,
+  },
+  {
+    path: '/embed',
+    component: Embed,
   },
   {
     path: '/settings-team',

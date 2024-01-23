@@ -30,7 +30,7 @@ const routes = [
     name: 'Dashboard',
   },
   {
-    path: '/app/leads', // url
+    path: '/app/articles', // url
     icon: <DocumentDuplicateIcon className={iconClasses}/>, // icon component
     name: 'Articles', // name that appear in Sidebar
   },

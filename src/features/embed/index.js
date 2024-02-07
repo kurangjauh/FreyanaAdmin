@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import TitleCard from '../../components/Cards/TitleCard'
-
+import { TwitterTimelineEmbed } from 'react-twitter-embed'
 
 function EmbedPage(){
     return(
@@ -17,7 +17,6 @@ function EmbedPage(){
                     <div className="mockup-code mt-4">
                     <pre className='my-0 py-0'><code>{'<a class="twitter-timeline" data-lang="en" data-dnt="true" data-theme="dark" href="https://twitter.com/Freya_JKT48?ref_src=twsrc%5Etfw">Tweets by Freya_JKT48</a>\n <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'}</code></pre>
                     </div>
-                    
                 </div>
 
 

@@ -18,6 +18,10 @@ import InboxArrowDownIcon from '@heroicons/react/24/outline/InboxArrowDownIcon'
 import UsersIcon from '@heroicons/react/24/outline/UsersIcon'
 import KeyIcon from '@heroicons/react/24/outline/KeyIcon'
 import DocumentDuplicateIcon from '@heroicons/react/24/outline/DocumentDuplicateIcon'
+import CodeBracket from '@heroicons/react/24/outline/CodeBracketSquareIcon'
+import UserPlus from '@heroicons/react/24/outline/UserPlusIcon'
+import Sparkles from '@heroicons/react/24/outline/SparklesIcon'
+import Gallery from '@heroicons/react/24/outline/PhotoIcon'
 
 const iconClasses = `h-6 w-6`
 const submenuIconClasses = `h-5 w-5`
@@ -33,6 +37,26 @@ const routes = [
     path: '/app/articles', // url
     icon: <DocumentDuplicateIcon className={iconClasses}/>, // icon component
     name: 'Articles', // name that appear in Sidebar
+  },
+  {
+    path: '/app/embed', // url
+    icon: <CodeBracket className={iconClasses}/>, // icon component
+    name: 'Embed', // name that appear in Sidebar
+  },
+  {
+    path: '/app/counter', // url
+    icon: <UserPlus className={iconClasses}/>, // icon component
+    name: 'Show Counter', // name that appear in Sidebar
+  },
+  {
+    path: '/app/amor', // url
+    icon: <Sparkles className={iconClasses}/>, // icon component
+    name: 'Amortentia Panel', // name that appear in Sidebar
+  },
+  {
+    path: '/app/gallery', // url
+    icon: <Gallery className={iconClasses}/>, // icon component
+    name: 'Gallery', // name that appear in Sidebar
   },
   {
     path: '', //no url needed as this has submenu

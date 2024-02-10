@@ -11,7 +11,7 @@ function EmbedPage(){
 
                 Untuk sementara, embed hanya tersedia untuk 2 media sosial : Twitter dan Tiktok. Untuk embed Instagram, sedang diolah kembali karena yang bersangkutan menon-aktifkan embed Instagram profile.
 
-                {/* Typography*/}
+                {/* Twitter / X*/}
               <h2 id="component1">Twitter</h2>
                 <div> 
                     <div className="mockup-code mt-4">
@@ -21,27 +21,12 @@ function EmbedPage(){
 
 
                  {/* Form Input*/}
-              <h2 id="component2">Form Input</h2>
-                <p>
-                      Many times we have to use form input like text, select one or toogle and in every file we have to handle its state management, here we have added global form component that can be used in any file and state variables can be managed by passing props to it. It is present in <span className="badge mt-0 mb-0 badge-ghost">/components/Input</span> folder. 
-                </p>
-                Ex- 
-                <div className="mockup-code mt-4">
-                    <pre className='my-0 py-0'><code>{'const INITIAL_LEAD_OBJ = {\n   first_name : "", \n   last_name : "", \n   email : "" \n  } \n   const [leadObj, setLeadObj] = useState(INITIAL_LEAD_OBJ) \n   const updateFormValue = ({updateType, value}) => {\n    setErrorMessage("") \n    setLeadObj({...leadObj, [updateType] : value})\n   }\n\n<InputText type="text" defaultValue={leadObj.first_name}  \n  updateType="first_name" containerStyle="mt-4"  \n  labelTitle="First Name" updateFormValue={updateFormValue}/>'}</code></pre>
+              <h2 id="component2">Tiktok</h2>
+              <div> 
+                    <div className="mockup-code mt-4">
+                    <pre className='my-0 py-0'><code>{'<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@freyajkt48" />\n data-unique-id="freyajkt48" data-embed-from="embed_page" data-embed-type="creator" style="max-width: 780px; min-width: 288px;" > <section> <a target="_blank" href="https://www.tiktok.com/@freyajkt48?refer=creator_embed">@freyajkt48</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>'}</code></pre>
+                    </div>
                 </div>
-                
-
-               <p> This example is from add new lead modal, here we are importing component for creating text input and passing some props to handle its content and state variable. Description of props are as follows - </p>
-                <ul>
-                  <li><span className='font-bold'>type</span> - Input type value like number, date, time etc.. </li>
-                  <li><span className='font-bold'>updateType</span> - This is used to update state variable in parent component</li>
-                  <li><span className='font-bold'>containerStyle</span> - Style class for container of input, which include label as well</li>
-                  <li><span className='font-bold'>labelTitle</span> - Title of the label</li>
-                  <li><span className='font-bold'>updateFormValue</span> - Function of parent component to update state variable</li>
-                </ul>
-            
-
-
 
                  {/* Cards */}
                  <h2 id="component3">Cards</h2>

@@ -7,8 +7,9 @@ import MoonIcon from '@heroicons/react/24/outline/MoonIcon'
 import SunIcon from '@heroicons/react/24/outline/SunIcon'
 import { openRightDrawer } from '../features/common/rightDrawerSlice';
 import { RIGHT_DRAWER_TYPES } from '../utils/globalConstantUtil'
-
-import { NavLink,  Routes, Link , useLocation} from 'react-router-dom'
+import {auth} from '../firebase'
+import { signOut } from 'firebase/auth'
+import { NavLink,  Routes, Link , useLocation, useNavigate} from 'react-router-dom'
 
 
 function Header(){
@@ -35,10 +36,16 @@ function Header(){
         dispatch(openRightDrawer({header : "Notifications", bodyType : RIGHT_DRAWER_TYPES.NOTIFICATION}))
     }
 
+    const navigate = useNavigate();
 
-    function logoutUser(){
-        localStorage.clear();
-        window.location.href = '/'
+    const handleLogout = () => {               
+        signOut(auth).then(() => {
+        // Sign-out successful.
+            navigate("/login");
+            console.log("Signed out successfully")
+        }).catch((error) => {
+        // An error happened.
+        });
     }
 
     return(
@@ -104,7 +111,7 @@ function Header(){
                         </li>
                         <li className=''><Link to={'/app/settings-billing'}>Bill History</Link></li>
                         <div className="divider mt-0 mb-0"></div>
-                        <li><a onClick={logoutUser}>Logout</a></li>
+                        <li><a onClick={handleLogout}>Logout</a></li>
                     </ul>
                 </div>
             </div>

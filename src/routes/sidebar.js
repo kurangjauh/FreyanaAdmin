@@ -44,9 +44,14 @@ const routes = [
     name: 'Embed', // name that appear in Sidebar
   },
   {
-    path: '/app/counter', // url
+    path: '/app/showcounter', // url
     icon: <UserPlus className={iconClasses}/>, // icon component
     name: 'Show Counter', // name that appear in Sidebar
+  },
+  {
+    path: '/app/calendar', // url
+    icon: <CalendarDaysIcon className={iconClasses}/>, // icon component
+    name: 'Calendar', // name that appear in Sidebar
   },
   {
     path: '/app/amor', // url
@@ -61,22 +66,22 @@ const routes = [
   {
     path: '', //no url needed as this has submenu
     icon: <DocumentDuplicateIcon className={`${iconClasses} inline` }/>, // icon component
-    name: 'API Template for Frontend', // name that appear in Sidebar
+    name: 'Page Template', // name that appear in Sidebar
     submenu : [
       {
         path: '/login',
         icon: <ArrowRightOnRectangleIcon className={submenuIconClasses}/>,
-        name: 'Instagram',
+        name: 'Login Page',
       },
       {
         path: '/register', //url
         icon: <UserIcon className={submenuIconClasses}/>, // icon component
-        name: 'Twitter', // name that appear in Sidebar
+        name: 'Register Page', // name that appear in Sidebar
       },
       {
         path: '/forgot-password',
         icon: <KeyIcon className={submenuIconClasses}/>,
-        name: 'Google Calendar',
+        name: 'Forgot Password Page',
       },
       {
         path: '/app/blank',

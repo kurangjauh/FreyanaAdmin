@@ -1,19 +1,18 @@
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { setPageTitle } from '../../features/common/headerSlice'
-import Leads from '../../features/leads'
-import Articles from '../../features/articles'
+import ShowCount from '../../features/showcounter'
 
 function InternalPage(){
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(setPageTitle({ title : "Articles"}))
+        dispatch(setPageTitle({ title : "Show Counter"}))
       }, [])
 
 
     return(
-        <Articles />
+        <ShowCount />
     )
 }
 

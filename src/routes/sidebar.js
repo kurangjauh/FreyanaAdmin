@@ -18,6 +18,10 @@ import InboxArrowDownIcon from '@heroicons/react/24/outline/InboxArrowDownIcon'
 import UsersIcon from '@heroicons/react/24/outline/UsersIcon'
 import KeyIcon from '@heroicons/react/24/outline/KeyIcon'
 import DocumentDuplicateIcon from '@heroicons/react/24/outline/DocumentDuplicateIcon'
+import CodeBracket from '@heroicons/react/24/outline/CodeBracketSquareIcon'
+import UserPlus from '@heroicons/react/24/outline/UserPlusIcon'
+import Sparkles from '@heroicons/react/24/outline/SparklesIcon'
+import Gallery from '@heroicons/react/24/outline/PhotoIcon'
 
 const iconClasses = `h-6 w-6`
 const submenuIconClasses = `h-5 w-5`
@@ -30,29 +34,54 @@ const routes = [
     name: 'Dashboard',
   },
   {
-    path: '/app/leads', // url
-    icon: <InboxArrowDownIcon className={iconClasses}/>, // icon component
-    name: 'Article', // name that appear in Sidebar
+    path: '/app/articles', // url
+    icon: <DocumentDuplicateIcon className={iconClasses}/>, // icon component
+    name: 'Articles', // name that appear in Sidebar
+  },
+  {
+    path: '/app/embed', // url
+    icon: <CodeBracket className={iconClasses}/>, // icon component
+    name: 'Embed', // name that appear in Sidebar
+  },
+  {
+    path: '/app/showcounter', // url
+    icon: <UserPlus className={iconClasses}/>, // icon component
+    name: 'Show Counter', // name that appear in Sidebar
+  },
+  {
+    path: '/app/calendar', // url
+    icon: <CalendarDaysIcon className={iconClasses}/>, // icon component
+    name: 'Calendar', // name that appear in Sidebar
+  },
+  {
+    path: '/app/amor', // url
+    icon: <Sparkles className={iconClasses}/>, // icon component
+    name: 'Amortentia Panel', // name that appear in Sidebar
+  },
+  {
+    path: '/app/gallery', // url
+    icon: <Gallery className={iconClasses}/>, // icon component
+    name: 'Gallery', // name that appear in Sidebar
   },
   {
     path: '', //no url needed as this has submenu
     icon: <DocumentDuplicateIcon className={`${iconClasses} inline` }/>, // icon component
-    name: 'API Template for Frontend', // name that appear in Sidebar
+    name: 'Page Template', // name that appear in Sidebar
     submenu : [
       {
         path: '/login',
         icon: <ArrowRightOnRectangleIcon className={submenuIconClasses}/>,
-        name: 'Instagram',
+        name: 'Login Page',
       },
       {
         path: '/register', //url
         icon: <UserIcon className={submenuIconClasses}/>, // icon component
-        name: 'Twitter', // name that appear in Sidebar
+        name: 'Register Page', // name that appear in Sidebar
       },
       {
         path: '/forgot-password',
         icon: <KeyIcon className={submenuIconClasses}/>,
-        name: 'Google Calendar',
+        name: 'Forgot Password Page',
       },
       {
         path: '/app/blank',
